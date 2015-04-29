@@ -6,7 +6,7 @@
 		<script>
 			var ws = new WebSocket('ws://localhost:8080/p5websocket');
 			ws.onmessage = function(ev) {
-				console.log( ev );
+				console.log( ev.data );
 			}
 		</script>
 	</body>

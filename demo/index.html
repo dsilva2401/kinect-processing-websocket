@@ -1,0 +1,14 @@
+<html>
+
+	<head></head>
+
+	<body>
+		<script>
+			var ws = new WebSocket('ws://localhost:8080/p5websocket');
+			ws.onmessage = function(ev) {
+				console.log( ev );
+			}
+		</script>
+	</body>
+
+</html>

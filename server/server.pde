@@ -4,8 +4,10 @@ import SimpleOpenNI.*;
 
 SimpleOpenNI	context;
 KinectStates	ks;
+WebSocketP5		socket;
 
 void setup() {
+	socket = new WebSocketP5(this,8080);
 	context = new SimpleOpenNI(this);
 	if (!context.isInit()) {
 		println("Can't init SimpleOpenNI, maybe the camera is not connected!"); 
@@ -20,7 +22,10 @@ void setup() {
 void draw() {
 	// Update the cam
 	context.update();
-	println( ks.getCurrentAction() );
+	String action = ks.getCurrentAction();
+	if( action != "" ){
+		socket.broadcast( action );
+	}
 }
 
 void onNewUser(SimpleOpenNI curContext, int userId) {
@@ -35,4 +40,8 @@ void websocketOnOpen(WebSocketConnection con){
 
 void websocketOnClosed(WebSocketConnection con){
 	println("A client left");
+}
+
+void stop(){
+	socket.stop();
 }

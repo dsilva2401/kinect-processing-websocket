@@ -22,4 +22,4 @@ Available actions
 - DOWN (Arm from E to F)
 
 ##### States chart
-<img src="doc/kinect-mealy.png">
+<img src="doc/states-mealy.png">

@@ -1,6 +1,12 @@
 # kinect-processing-websocket
 An easy way to use kinect power through websockets
 
+##### Requirements
+- Processing
+- SimpleOpenNi
+- NiTE
+- a Kinect
+
 To start open `server.pde` file in processing
 ```bash
 mkdir myapp

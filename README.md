@@ -5,6 +5,7 @@ An easy way to use kinect power through websockets
 - Processing
 - SimpleOpenNi
 - NiTE
+- WebSocketP5
 - a Kinect
 
 To start open `server.pde` file in processing

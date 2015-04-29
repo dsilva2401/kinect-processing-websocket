@@ -12,5 +12,14 @@ And execute..
 
 WebSocket will be available at `ws://domain:8080/p5websocket`
 
-
+##### Sections
 <img src="doc/states.jpg">
+
+Available actions
+- LEFT ( Arm from B to A or D to C  )
+- RIGHT ( Arm from A to B or C to D  )
+- UP (Arm from F to E)
+- DOWN (Arm from E to F)
+
+##### States chart
+<img src="doc/kinect-mealy.png">
